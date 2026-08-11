@@ -2,6 +2,10 @@
 
 Python script that listens to your default microphone and runs a **double-clap** welcome flow (Spotify, Chrome windows, ElevenLabs voice, Cursor). See constants at the top of `jarvis.py` for behavior and tuning.
 
+## Interface preview
+
+![Vegeta desktop interface](assets/screenshots/vegeta-dashboard.png)
+
 ## Setup
 
 From this project directory:
