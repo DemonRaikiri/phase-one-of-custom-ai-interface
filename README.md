@@ -50,6 +50,22 @@ ELEVENLABS_VOICE_ID=your_voice_id_here
 python jarvis.py
 ```
 
+## Dashboard and assistant chat
+
+1. Install the dependencies with `python -m pip install -r requirements.txt`.
+2. Create a local `.env` file; it is ignored by Git and must never be committed.
+3. Add `OPENAI_API_KEY` for the dashboard chat and, optionally, the ElevenLabs variables for spoken greetings.
+4. Start the dashboard with `python jarvis_ui.py`.
+5. Say **Hey Vegeta** to activate the launch flow. The dashboard can open Spotify, Brave, Codex, and the local interface.
+
+The dashboard shows CPU, memory, disk use, uptime, GPU temperature/utilization, and GPU fan speed when NVIDIA telemetry is available. It uses Windows DPI awareness for sharp high-resolution rendering.
+
+## Security
+
+- `.env`, `*.env`, and cached audio are excluded from the repository.
+- API keys and voice credentials are loaded only from local environment configuration.
+- Before publishing changes, run `git status` and verify that no credential files are staged.
+
 Allow the microphone if Windows prompts you. Stop with **Ctrl+C**.
 
 ## Tuning
