@@ -4,7 +4,7 @@ Python script that listens to your default microphone and runs a **double-clap**
 
 ## Interface preview
 
-![Vegeta desktop interface](assets/screenshots/vegeta-dashboard.png)
+![Vegeta desktop interface](assets/screenshots/vegeta-dashboard-full.png)
 
 ## Setup
 
