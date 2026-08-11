@@ -6,6 +6,10 @@ Python script that listens to your default microphone and runs a **double-clap**
 
 ![Vegeta desktop interface](assets/screenshots/vegeta-dashboard-full.png)
 
+## Personalize the name
+
+`Custom` is a placeholder name. You can replace it with any assistant name you prefer by renaming `custom.py`, `custom_ui.py`, and `custom_avatar.png`, then updating the matching file references and display text. The wake phrase and dashboard title can be changed separately to suit your own assistant.
+
 ## Setup
 
 From this project directory:
