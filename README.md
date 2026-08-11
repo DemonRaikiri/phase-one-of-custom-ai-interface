@@ -1,4 +1,4 @@
-# Desktop clap → Jarvis-style welcome
+# Desktop clap → Custom-style welcome
 
 Python script that listens to your default microphone and runs a **double-clap** welcome flow (Spotify, Chrome windows, ElevenLabs voice, Cursor). See constants at the top of `custom.py` for behavior and tuning.
 
