@@ -1,6 +1,6 @@
 # Desktop clap → Jarvis-style welcome
 
-Python script that listens to your default microphone and runs a **double-clap** welcome flow (Spotify, Chrome windows, ElevenLabs voice, Cursor). See constants at the top of `jarvis.py` for behavior and tuning.
+Python script that listens to your default microphone and runs a **double-clap** welcome flow (Spotify, Chrome windows, ElevenLabs voice, Cursor). See constants at the top of `custom.py` for behavior and tuning.
 
 ## Interface preview
 
@@ -16,7 +16,7 @@ python -m pip install -r requirements.txt
 
 ## Environment variables
 
-The script loads a **`.env` file** in the same folder as `jarvis.py` (via `python-dotenv`). You can also set variables in the shell.
+The script loads a **`.env` file** in the same folder as `custom.py` (via `python-dotenv`). You can also set variables in the shell.
 
 ### Required (ElevenLabs welcome line)
 
@@ -51,7 +51,7 @@ ELEVENLABS_VOICE_ID=your_voice_id_here
 ## Run
 
 ```bash
-python jarvis.py
+python custom.py
 ```
 
 ## Dashboard and assistant chat
@@ -59,7 +59,7 @@ python jarvis.py
 1. Install the dependencies with `python -m pip install -r requirements.txt`.
 2. Create a local `.env` file; it is ignored by Git and must never be committed.
 3. Add `OPENAI_API_KEY` for the dashboard chat and, optionally, the ElevenLabs variables for spoken greetings.
-4. Start the dashboard with `python jarvis_ui.py`.
+4. Start the dashboard with `python custom_ui.py`.
 5. Say **Hey Vegeta** to activate the launch flow. The dashboard can open Spotify, Brave, Codex, and the local interface.
 
 The dashboard shows CPU, memory, disk use, uptime, GPU temperature/utilization, and GPU fan speed when NVIDIA telemetry is available. It uses Windows DPI awareness for sharp high-resolution rendering.
@@ -74,7 +74,7 @@ Allow the microphone if Windows prompts you. Stop with **Ctrl+C**.
 
 ## Tuning
 
-Edit the constants at the top of `jarvis.py`:
+Edit the constants at the top of `custom.py`:
 
 | Constant      | Effect                                                            |
 | ------------- | ----------------------------------------------------------------- |

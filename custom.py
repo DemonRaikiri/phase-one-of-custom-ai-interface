@@ -507,13 +507,13 @@ def open_codex() -> None:
 
 
 def open_dashboard() -> None:
-    script = Path(__file__).resolve().parent / "jarvis_ui.py"
+    script = Path(__file__).resolve().parent / "custom_ui.py"
     if not script.is_file():
         return
     try:
         _quiet_popen([sys.executable, str(script)])
     except OSError as e:
-        log.warning("Could not open the Jarvis dashboard: %s", e)
+        log.warning("Could not open the Custom dashboard: %s", e)
 
 
 def _chrome_executable() -> str | None:

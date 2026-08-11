@@ -1,4 +1,4 @@
-"""A compact local dashboard for the Jarvis wake-word assistant."""
+"""A compact local dashboard for the Custom wake-word assistant."""
 
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ CYAN = "#49d9ff"
 TEXT = "#c7f3ff"
 
 
-class JarvisDashboard(tk.Tk):
+class CustomDashboard(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
         self.title("VEGETA")
@@ -73,7 +73,7 @@ class JarvisDashboard(tk.Tk):
         center.grid(row=0, column=1, sticky="nsew")
         self.canvas = tk.Canvas(center, bg=BG, highlightthickness=0, width=500, height=500)
         self.canvas.pack(expand=True)
-        avatar_path = Path(__file__).resolve().parent / "assets" / "jarvis_avatar.png"
+        avatar_path = Path(__file__).resolve().parent / "assets" / "custom_avatar.png"
         image = Image.open(avatar_path).convert("RGBA")
         image.thumbnail((320, 390), Image.LANCZOS)
         self.avatar = ImageTk.PhotoImage(image)
@@ -145,7 +145,7 @@ class JarvisDashboard(tk.Tk):
 
     def ask_openai(self, text: str) -> None:
         try:
-            response = self.client.responses.create(model="gpt-5-mini", input=[{"role": "system", "content": "You are Jarvis, a helpful desktop assistant. Be concise."}, {"role": "user", "content": text}])
+            response = self.client.responses.create(model="gpt-5-mini", input=[{"role": "system", "content": "You are Custom, a helpful desktop assistant. Be concise."}, {"role": "user", "content": text}])
             answer = response.output_text or "I did not receive a text response."
         except Exception as exc:
             answer = f"Chat request failed: {exc}"
@@ -154,4 +154,4 @@ class JarvisDashboard(tk.Tk):
 
 if __name__ == "__main__":
     enable_windows_dpi_awareness()
-    JarvisDashboard().mainloop()
+    CustomDashboard().mainloop()
