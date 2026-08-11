@@ -43,6 +43,8 @@ class JarvisDashboard(tk.Tk):
         self.configure(bg=BG)
         self.geometry("1280x760")
         self.minsize(980, 620)
+        if os.name == "nt":
+            self.state("zoomed")
         self._pulse = 0
         load_dotenv(Path(__file__).resolve().parent.parent / ".env")
         self.client = OpenAI() if os.environ.get("OPENAI_API_KEY") else None
